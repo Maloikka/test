@@ -5,10 +5,13 @@ options:
     iOS: "16.0"
   createIntermediateGroups: true
 
+# Значения по умолчанию подходят для локального запуска в симуляторе.
+# Для распространения через TestFlight CI перезаписывает BUNDLE_ID,
+# DEVELOPMENT_TEAM, провижн-профайл и сертификат подписи через
+# флаги xcodebuild (см. .github/workflows/ios-testflight.yml).
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    DEVELOPMENT_TEAM: ""
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
     IPHONEOS_DEPLOYMENT_TARGET: "16.0"
@@ -35,8 +38,10 @@ targets:
           - ru
           - en
         CFBundleDevelopmentRegion: ru
+        ITSAppUsesNonExemptEncryption: false
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.regionfiller.app
         GENERATE_INFOPLIST_FILE: NO
         ENABLE_PREVIEWS: YES
+        CODE_SIGN_STYLE: Automatic
