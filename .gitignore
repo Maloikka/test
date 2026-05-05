@@ -1,0 +1,35 @@
+## Xcode generated
+RegionFiller.xcodeproj/
+RegionFiller.xcworkspace/
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/README.md
+
+## Local secrets — НЕ КОММИТИТЬ!
+.env
+.env.local
+*.p8
+*.p12
+*.mobileprovision
+*.cer
+
+## Ruby / bundler
+.bundle/
+vendor/bundle/
+
+## macOS
+.DS_Store
+
+## Misc
+*.log
+*.tmp
