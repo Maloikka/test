@@ -1,0 +1,42 @@
+name: RegionFiller
+options:
+  bundleIdPrefix: com.regionfiller
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+targets:
+  RegionFiller:
+    type: application
+    platform: iOS
+    sources:
+      - path: RegionFiller
+    info:
+      path: RegionFiller/Info.plist
+      properties:
+        CFBundleDisplayName: Region Filler
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen:
+          UIColorName: ""
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIUserInterfaceStyle: Automatic
+        CFBundleLocalizations:
+          - ru
+          - en
+        CFBundleDevelopmentRegion: ru
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.regionfiller.app
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_PREVIEWS: YES
